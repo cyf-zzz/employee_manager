@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+    <bean class="cyf.service.impl.AdminServiceImpl" name="adminService">
+        <property name="adminDao" ref="adminDao"></property>
+    </bean>
+
+    <bean class="cyf.service.impl.EmployeeServiceImpl" name="employeeService">
+        <property name="employeeDao" ref="employeeDao"></property>
+    </bean>
+
+    <bean class="cyf.service.impl.DepartmentServiceImpl" name="departmentService">
+        <property name="departmentDao" ref="departmentDao"></property>
+    </bean>
+
+    <bean class="cyf.service.impl.SalaryServiceImpl" name="salaryService">
+        <property name="salaryDao" ref="salaryDao"></property>
+    </bean>
+
+</beans>

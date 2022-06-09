@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cyf.entity.Employee" table="employee" schema="chenyafei1207">
+        <id name="empno">
+            <column name="empno" sql-type="int(10)"/>
+        </id>
+        <property name="empname">
+            <column name="empname" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="empsalary">
+            <column name="empsalary" sql-type="decimal(10,2)" precision="10" scale="2" not-null="true"/>
+        </property>
+        <property name="dptno">
+            <column name="dptno" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

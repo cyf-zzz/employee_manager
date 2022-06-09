@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+
+    <bean class="cyf.action.AdminAction" name="adminAction">
+        <property name="adminService" ref="adminService"></property>
+    </bean>
+
+    <bean class="cyf.action.EmployeeAction" name="employeeAction">
+        <property name="employeeService" ref="employeeService"></property>
+        <property name="departmentService" ref="departmentService"></property>
+    </bean>
+
+    <bean class="cyf.action.SalaryAction" name="salaryAction">
+        <property name="salaryService" ref="salaryService"></property>
+        <property name="employeeService" ref="employeeService"></property>
+    </bean>
+
+    <bean class="cyf.action.ResultAction" name="resultAction">
+        <property name="salaryService" ref="salaryService"></property>
+    </bean>
+
+
+</beans>
